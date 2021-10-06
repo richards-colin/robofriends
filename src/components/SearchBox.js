@@ -1,10 +1,12 @@
 import React from 'react';
+import './Components.css';
+
 
 const SearchBox = ({ searchfield, searchChange }) => {
   return (
     <div className='pa2'>
       <input
-        className='pa3 ba b--green bg-lightest-blue'
+        className='searchBox'
         type='search'
         placeholder='search robots'
         onChange={searchChange}
@@ -14,3 +16,5 @@ const SearchBox = ({ searchfield, searchChange }) => {
 }
 
 export default SearchBox;
+
+// pa3 ba b--green bg-lightest-blue
