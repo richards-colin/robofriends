@@ -15,9 +15,10 @@ function App(){
 const [robots, setRobots] = useState([])
 const [searchfield, setSearchfield] = useState('')
 
-useEffect(() => {
-  alert("this is a web application that is using React.js, Tachyons, React Hooks and an api call");
-}, []);
+// useEffect(() => {
+//   alert("this is a web application that is using React.js, Tachyons, React Hooks and an api call");
+// }, []);
+//actually use the useState hook to create a piece of state that will toggle a modal to display the information for the application.
   // componentDidMount() {
   //   fetch('https://jsonplaceholder.typicode.com/users')
   //     .then(response=> response.json())
