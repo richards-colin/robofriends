@@ -15,6 +15,9 @@ function App(){
 const [robots, setRobots] = useState([])
 const [searchfield, setSearchfield] = useState('')
 
+useEffect(() => {
+  alert("this is a web application that is using React.js, Tachyons, React Hooks and an api call");
+}, []);
   // componentDidMount() {
   //   fetch('https://jsonplaceholder.typicode.com/users')
   //     .then(response=> response.json())
