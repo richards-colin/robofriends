@@ -5,7 +5,6 @@ import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
 import 'tachyons'; 
 
-ReactDOM.createPortal(child, container)
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
