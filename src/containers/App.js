@@ -3,6 +3,7 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import './App.css';
+import Modal from '../components/Modal';
 
 function App(){
   // constructor() {
@@ -41,6 +42,7 @@ useEffect(()=>{
       <h1>Loading</h1> :
       (
         <div className='tc'>
+        <button onClick={() => Modal.current.open()}>Open Me</button>
           <h1 className='f1'>RoboFriends</h1>
           <SearchBox searchChange={onSearchChange}/>
           <Scroll>
