@@ -32,7 +32,9 @@ export function Modal({ children, fade = false, defaultOpened = true }, ref) {
         <span role="button" className="modal-close" aria-label="close" onClick={close}>
           x
         </span>
-        <div className="modal-body">{children}</div>
+        <div className="modal-body">{children}
+        <button onClick={close}>Close</button>
+        </div>
       </div>
     ) : null,
     modalElement
