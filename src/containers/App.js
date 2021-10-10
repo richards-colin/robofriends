@@ -44,8 +44,10 @@ useEffect(()=>{
       <h1>Loading</h1> :
       (
         <div className='tc'>
-        {/* <button onClick={() => modal.current.open()}>Open Me</button> */}
-        <Modal ref={modal}>Hello World</Modal>
+        <Modal ref={modal}>
+        <h1>Hello World</h1>
+        <button onClick={() => modal.current.close()}>Close</button>
+        </Modal>
           <h1 className='f1'>RoboFriends</h1>
           <SearchBox searchChange={onSearchChange}/>
           <Scroll>

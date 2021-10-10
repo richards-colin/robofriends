@@ -33,7 +33,7 @@ export function Modal({ children, fade = false, defaultOpened = true }, ref) {
           x
         </span>
         <div className="modal-body">{children}
-        <button onClick={close}>Close</button>
+        {/* <button className="modal-button" onClick={close}>Close</button> */}
         </div>
       </div>
     ) : null,

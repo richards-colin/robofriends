@@ -55,32 +55,20 @@
   .modal > .modal-close:hover {
     background: rgba(255, 255, 255, 0.989);
   }
-  
-  .modal > .modal-body {
-    z-index: 2;
-    position: relative;
-    margin: 100px;
-    background-color: #ffe5b0;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 3px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    max-height: 100%;
-    padding: 200px 300px;
-    color: #3e3c3c;
-  }
 
   .modal > .modal-body {
+    display: flex;
+    flex-direction: column;
     z-index: 2;
     position: relative;
-    margin: 100px;
-    background-color: #ffe5b0;
+    /* margin: 100px; */
+    background-color: #FFF2C5;
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 3px;
     overflow-x: hidden;
     overflow-y: auto;
     max-height: 100%;
-    padding: 200px 300px;
+    padding: 10rem 15rem;
     color: #3e3c3c;
   }
   
