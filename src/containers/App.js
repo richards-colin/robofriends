@@ -46,6 +46,8 @@ useEffect(()=>{
         <div className='tc'>
         <Modal ref={modal}>
         <h1>Hello World</h1>
+        <h2>This web application is made to display using React.js to filter through
+          an array that will display various robots.</h2>
         <button onClick={() => modal.current.close()}>Close</button>
         </Modal>
           <h1 className='f1'>RoboFriends</h1>
