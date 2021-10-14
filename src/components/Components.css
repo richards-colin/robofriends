@@ -19,7 +19,8 @@
     .searchBox {
         padding: 1rem;
         background-color: white ;
-        border-color: #FFF2C5;
+        border-color: #ededed;
         border-style: solid;
         border-width: 1px;
+        box-shadow: 2px 2px 4px 2px rgb(0 0 0 / 20%);
     }
