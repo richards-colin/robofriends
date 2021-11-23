@@ -3,7 +3,8 @@ export const robots = [
     id: 1,
     name: 'Leanne Graham',
     username: 'Bret',
-    email: 'Sincere@april.biz'
+    email: 'Sincere@april.biz',
+    website: "hildegard.org"
   },
   {
     id: 2,
