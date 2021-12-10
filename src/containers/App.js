@@ -1,9 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import './App.css';
 import Modal from '../components/Modal';
+
+import { setSearchField } from '../actions'
+
+const mapStateToProps = state => {
+  return {
+    searchField: state.searchRobots.searchField
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSearchChange: (event) => dispatch(setSearchField(event.target.value ))
+  }
+}
 
 function App(){
 
@@ -17,10 +32,10 @@ useEffect(()=>{
     .then(users => {setRobots(users)});
 }, [])
 
-
-  const onSearchChange = (event) => {
-    setSearchfield(event.target.value)
-  }
+// this was coming down as props but because of redux we don't have to declare it
+  // const onSearchChange = (event) => {
+  //   setSearchfield(event.target.value)
+  // }
 
     const filteredRobots = robots.filter(robot =>{
       return robot.name.toLowerCase().includes(searchfield.toLowerCase());
@@ -44,4 +59,4 @@ useEffect(()=>{
       );
   }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
