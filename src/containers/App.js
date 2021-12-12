@@ -10,7 +10,7 @@ import { setSearchField } from '../actions'
 
 const mapStateToProps = state => {
   return {
-    searchField: state.searchRobots.searchField
+    searchField: state.searchField
   }
 }
 
@@ -24,7 +24,9 @@ function App(){
 
 const modal = useRef(null)  
 const [robots, setRobots] = useState([])
-const [searchfield, setSearchfield] = useState('')
+const [searchField, setSearchField] = useState('')
+// const { searchField, onSearchChange } = this.props;
+
 
 useEffect(()=>{
   fetch('https://jsonplaceholder.typicode.com/users')
@@ -33,12 +35,12 @@ useEffect(()=>{
 }, [])
 
 // this was coming down as props but because of redux we don't have to declare it
-  // const onSearchChange = (event) => {
-  //   setSearchfield(event.target.value)
-  // }
+  const onSearchChange = (event) => {
+    setSearchField(event.target.value)
+  }
 
     const filteredRobots = robots.filter(robot =>{
-      return robot.name.toLowerCase().includes(searchfield.toLowerCase());
+      return robot.name.toLowerCase().includes(searchField.toLowerCase());
     })
     return !robots.length ?
       <h1>Loading</h1> :

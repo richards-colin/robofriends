@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider, Connect } from 'react-redux';
+import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './index.css';
 import App from './containers/App';
@@ -8,11 +8,11 @@ import registerServiceWorker from './registerServiceWorker';
 import 'tachyons'; 
 import { searchRobots } from './reducers';
   
-
+//            createStore(takes in the root reducer here)
 const store = createStore(searchRobots)
 
 ReactDOM.render(
-<Provider>
-    <App store={store}/>
+<Provider store={store}>
+    <App />
 </Provider>, document.getElementById('root'));
 registerServiceWorker();
